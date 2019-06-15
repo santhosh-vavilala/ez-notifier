@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notification-bar.component.scss']
 })
 export class NotificationBarComponent implements OnInit {
-
+  myMessage = 'This is a simple text message from componenet..'
   constructor() { }
 
   ngOnInit() {
