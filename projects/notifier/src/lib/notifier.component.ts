@@ -2,12 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ez-notifier',
-  template: `
-    <p>
-      notifier works!
-    </p>
-  `,
-  styles: []
+  templateUrl: './notifier.component.html',
+  styleUrls: ['./notifier.component.scss']
 })
 export class NotifierComponent implements OnInit {
 

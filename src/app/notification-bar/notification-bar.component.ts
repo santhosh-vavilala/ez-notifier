@@ -12,4 +12,4 @@ export class NotificationBarComponent implements OnInit {
   ngOnInit() {
   }
 
-}
+} 
