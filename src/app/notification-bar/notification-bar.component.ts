@@ -14,7 +14,8 @@ export class NotificationBarComponent implements OnInit {
   }
 
   showNotification(){
-    this.notifier.appendComponentToBody('this is san');
+    this.notifier.show('this is san');
+    this.notifier.show('this is san test');
   }
 
 } 
