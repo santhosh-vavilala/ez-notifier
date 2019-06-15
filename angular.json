@@ -121,6 +121,46 @@
           }
         }
       }
+    },
+    "notifier": {
+      "root": "projects/notifier",
+      "sourceRoot": "projects/notifier/src",
+      "projectType": "library",
+      "prefix": "ez",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/notifier/tsconfig.lib.json",
+            "project": "projects/notifier/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/notifier/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/notifier/src/test.ts",
+            "tsConfig": "projects/notifier/tsconfig.spec.json",
+            "karmaConfig": "projects/notifier/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/notifier/tsconfig.lib.json",
+              "projects/notifier/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "rdpd"
