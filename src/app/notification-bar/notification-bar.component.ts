@@ -11,6 +11,9 @@ export class NotificationBarComponent implements OnInit {
   constructor(private notifier: NotifierService) { }
 
   ngOnInit() {
+  }
+
+  showNotification(){
     this.notifier.appendComponentToBody('this is san');
   }
 
