@@ -17,11 +17,12 @@ export class NotifierService {
     private injector: Injector
 ) { }
 message:string = '';
-public show(message: string) {
+public show(message: string, messageType: string) {
   const componentRef = this.componentFactoryResolver
     .resolveComponentFactory(NotifierComponent)
     .create(this.injector);
   componentRef.instance.message = message;
+  componentRef.instance.messageType = messageType;
   this.appRef.attachView(componentRef.hostView);
   const domElem = (componentRef.hostView as EmbeddedViewRef<any>)
     .rootNodes[0] as HTMLElement;

@@ -1,3 +1,5 @@
-<div class="notification-container success">
+<div class="notification-container"  
+[ngClass]="{'success':messageType == 'success', 'warning': messageType == 'warning', 
+'error':messageType == 'error'}">
     <span>{{message}}</span>
 </div>

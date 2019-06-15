@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class NotifierComponent implements OnInit {
   message: string = '';
+  messageType: string = '';
   constructor() { }
 
   ngOnInit() {
