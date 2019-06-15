@@ -5,6 +5,7 @@ import { NotifierComponent } from './notifier.component';
   imports: [
   ],
   declarations: [NotifierComponent],
-  exports: [NotifierComponent]
+  exports: [NotifierComponent],
+  entryComponents: [NotifierComponent],
 })
 export class NotifierModule { }

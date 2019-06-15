@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NotifierService } from'notifier'
 
 @Component({
   selector: 'app-notification-bar',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotificationBarComponent implements OnInit {
   myMessage = 'This is a simple text message from componenet..'
-  constructor() { }
+  constructor(private notifier: NotifierService) { }
 
   ngOnInit() {
+    this.notifier.appendComponentToBody(null);
   }
 
 } 

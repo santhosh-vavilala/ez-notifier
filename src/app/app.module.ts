@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NotificationBarComponent } from './notification-bar/notification-bar.component';
-import { NotifierModule } from 'notifier'
+import { NotifierModule, NotifierService } from 'notifier'
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { NotifierModule } from 'notifier'
     BrowserModule,
     NotifierModule 
   ],
-  providers: [],
+  providers: [NotifierService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

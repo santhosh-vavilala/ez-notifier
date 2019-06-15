@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./notifier.component.scss']
 })
 export class NotifierComponent implements OnInit {
-  @Input() message = '';
+  message: string = 'test message';
   constructor() { }
 
   ngOnInit() {
