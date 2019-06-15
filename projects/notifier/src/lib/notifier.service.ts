@@ -22,7 +22,7 @@ public appendComponentToBody(message: string) {
   const componentRef = this.componentFactoryResolver
     .resolveComponentFactory(NotifierComponent)
     .create(this.injector);
-  
+  componentRef.instance.message = message;
   // 2. Attach component to the appRef so that it's inside the ng component tree
   this.appRef.attachView(componentRef.hostView);
   
