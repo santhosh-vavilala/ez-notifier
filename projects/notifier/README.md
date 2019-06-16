@@ -1,6 +1,6 @@
 # ez-notifier
 
-This is to create eazy notifications at the client side.
+Minimalistic design, simple, customizable, and easy-to-use notification library for your Angular 2+ application.
 
 ## Installation
 
@@ -13,7 +13,7 @@ import { NgModule } from '@angular/core';<br />
 <br />
 import { AppComponent } from './app.component';<br />
 import { NotificationBarComponent } from './notification-bar/notification-bar.component';<br />
-import { NotifierModule, NotifierService } from 'notifier'<br />
+import { NotifierModule, NotifierService } from 'ez-notifier'<br />
 <br />
 @NgModule({<br />
   declarations: [<br />
