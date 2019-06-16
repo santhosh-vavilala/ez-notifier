@@ -14,6 +14,6 @@ export class NotificationBarComponent implements OnInit {
   }
 
   showNotification(){
-    this.notifier.show('this is san', 'error');
+    this.notifier.show(this.myMessage, 'error');
   }
 } 
