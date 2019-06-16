@@ -8,52 +8,52 @@ Run `npm install ez-notifier`
 
 ## Code - app.module.ts
 
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
-import { NotificationBarComponent } from './notification-bar/notification-bar.component';
-import { NotifierModule, NotifierService } from 'notifier'
-
-@NgModule({
-  declarations: [
-    AppComponent,
-    NotificationBarComponent
+import { BrowserModule } from '@angular/platform-browser';<br />
+import { NgModule } from '@angular/core';<br />
+<br />
+import { AppComponent } from './app.component';<br />
+import { NotificationBarComponent } from './notification-bar/notification-bar.component';<br />
+import { NotifierModule, NotifierService } from 'notifier'<br />
+<br />
+@NgModule({<br />
+  declarations: [<br />
+    AppComponent,<br />
+    NotificationBarComponent<br />
   ],
-  imports: [
-    BrowserModule,
-    NotifierModule 
-  ],
-  providers: [NotifierService],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
-
+  imports: [<br />
+    BrowserModule,<br />
+    NotifierModule <br />
+  ],<br />
+  providers: [NotifierService],<br />
+  bootstrap: [AppComponent]<br />
+})<br />
+export class AppModule { }<br />
+<br />
 ## Show notification at component.
 
-import { Component, OnInit } from '@angular/core';
-import { NotifierService } from'notifier'
-
+import { Component, OnInit } from '@angular/core';<br />
+import { NotifierService } from'notifier'<br />
+<br />
 @Component({
-  selector: 'app-notification-bar',
-  templateUrl: './notification-bar.component.html',
-  styleUrls: ['./notification-bar.component.scss']
-})
-export class NotificationBarComponent implements OnInit {
-  myMessage = 'This is a simple text message from componenet..'
-  constructor(private notifier: NotifierService) { }
+  selector: 'app-notification-bar',<br />
+  templateUrl: './notification-bar.component.html',<br />
+  styleUrls: ['./notification-bar.component.scss']<br />
+})<br />
+export class NotificationBarComponent implements OnInit {<br /><br />
+  myMessage = 'This is a simple text message from componenet..'<br />
+  constructor(private notifier: NotifierService) { }<br />
+<br />
+  ngOnInit() {<br />
+  }<br />
 
-  ngOnInit() {
-  }
-
-  showNotification(){
-    this.notifier.show(this.myMessage, 'error');
-  }
-} 
+  showNotification(){<br />
+    this.notifier.show(this.myMessage, 'error');<br />
+  }<br />
+} <br />
 
 
 ## Configuration
 
-Error:  this.notifier.show(this.myMessage, 'error');
-Warining: this.notifier.show(this.myMessage, 'warning');
-Success: this.notifier.show(this.myMessage, 'success');
+Error:  this.notifier.show(this.myMessage, 'error');<br />
+Warining: this.notifier.show(this.myMessage, 'warning');<br />
+Success: this.notifier.show(this.myMessage, 'success');<br />
